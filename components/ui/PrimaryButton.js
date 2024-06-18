@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Text, View, Pressable, StyleSheet } from 'react-native';
 import Colors from '../../constants/colors';
-function PrimaryButton({ children, onPress }) {
+function PrimaryButton({ children, onPress, disabled }) {
   return (
     <View style={styles.buttonOuterContainer}>
       <Pressable
@@ -11,6 +11,7 @@ function PrimaryButton({ children, onPress }) {
             : styles.buttonInnerContainer
         }
         onPress={onPress}
+        disabled={disabled}
         android_ripple={{ color: Colors.primary600 }}
       >
         <Text style={styles.buttonText}>{children}</Text>
@@ -21,6 +22,7 @@ function PrimaryButton({ children, onPress }) {
 
 PrimaryButton.propTypes = {
   children: PropTypes.node.isRequired,
+  onPress: PropTypes.func,
 };
 
 export default PrimaryButton;
