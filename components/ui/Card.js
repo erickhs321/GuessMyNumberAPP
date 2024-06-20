@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Dimensions } from 'react-native';
 import Colors from '../../constants/colors';
 
 function Card({ children }) {
@@ -11,10 +11,10 @@ Card.propTypes = {
 };
 
 export default Card;
-
+const deviceWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
   card: {
-    marginTop: 36,
+    marginTop: deviceWidth < 380 ? 18 : 36,
     marginHorizontal: 24,
     padding: 16,
     backgroundColor: Colors.primary800,
