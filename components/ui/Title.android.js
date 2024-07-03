@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     borderWidth: 2,
-    borderColor: 'red',
+    borderColor: 'white',
     padding: 12,
     maxWidth: '80%',
     width: 300,
